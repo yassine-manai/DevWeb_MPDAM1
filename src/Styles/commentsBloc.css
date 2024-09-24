@@ -1,0 +1,121 @@
+/* Enhanced CSS for CommentsBloc component */
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ui.comments {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.avatar {
+    margin-right: 20px;
+}
+
+.content {
+    flex: 1;
+}
+
+.author {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.metadata {
+    margin-top: 5px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.text {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.actions .reply,
+.actions .delete {
+    cursor: pointer;
+    color: #2185d0;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.actions .delete {
+    color: #db2828;
+}
+
+.actions .reply:hover,
+.actions .delete:hover {
+    text-decoration: underline;
+}
+
+.ui.reply.form {
+    margin-top: 20px;
+}
+
+.ui.reply.form .field {
+    margin-bottom: 10px;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 1em;
+    background-color: #fafafa;
+}
+
+.ui.primary.submit.labeled.icon.button {
+    background-color: #2185d0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.ui.primary.submit.labeled.icon.button i.icon {
+    margin-right: 10px;
+}
+
+.ui.primary.submit.labeled.icon.button:hover {
+    background-color: #1a69b2;
+}
+
+/* Centering the comment section */
+.ui.comments {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 700px;
+}

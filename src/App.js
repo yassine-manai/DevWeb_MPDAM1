@@ -1,11 +1,10 @@
 import './App.css';
+import CommentsBloc from './Components/comments';
 
 function App() {
   return (
     <div className="App">
-        <h1>
-          HELLO EVERYONE
-        </h1>
+       <CommentsBloc/>
     </div>
   );
 }
