@@ -1,235 +1,148 @@
-/* General Styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Body Styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f7fafc;
+  background-color: #f8f9fa; /* Light background for better contrast */
+  margin: 0;
+  padding: 0;
   color: #333;
   line-height: 1.6;
 }
 
-.App {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-  color: #333;
-  letter-spacing: 0.5px;
-}
-
-/* Navigation */
-nav {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #007bff;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #0056b3;
-}
-
-/* Table Styling */
-.book-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.book-table th, 
-.book-table td {
-  border: 1px solid #e0e0e0;
-  padding: 15px;
-  text-align: left;
-}
-
-.book-table th {
-  background-color: #007bff;
+/* Navbar Styling */
+.navbar {
+  background-color: #343a40; /* Dark grey background for a more modern look */
   color: #fff;
-  text-transform: uppercase;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 28px;
   font-weight: bold;
 }
 
-.book-table td {
-  background-color: #fff;
-  color: #555;
-}
-
-.book-table tr:nth-child(even) td {
-  background-color: #f9f9f9;
-}
-
-.book-table tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Form Elements */
-.book-form {
+.nav-links {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  gap: 25px;
 }
 
-input, select {
-  flex: 1;
-  padding: 12px 15px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #495057;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-input:focus, select:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+.nav-links a:hover {
+  background-color: #17a2b8; /* Slight teal tint on hover */
+  transform: translateY(-2px);
+}
+
+/* Container Styling */
+.container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Subtle hover effect */
 }
 
 /* Button Styling */
 button {
-  display: inline-block;
-  background-color: #007bff;
+  background-color: #28a745; /* Green success button */
   color: white;
-  padding: 12px 25px;
-  font-size: 1rem;
+  padding: 12px 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
+  font-size: 16px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  background-color: #218838; /* Darker green on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Elevate button on hover */
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.add-book-btn {
-  background-color: #28a745;
-}
-
-.add-book-btn:hover {
-  background-color: #218838;
-}
-
-.edit-btn {
-  background-color: #ffc107;
-}
-
-.edit-btn:hover {
-  background-color: #e0a800;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-}
-
-.delete-btn:hover {
-  background-color: #c82333;
-}
-
-/* Modal Styling */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Input Field Styling */
+input {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.modal-content {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  animation: fadeIn 0.3s ease;
+input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Subtle focus glow */
+  outline: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
 }
 
-.modal-content h3 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: #333;
+table, th, td {
+  border: 1px solid #dee2e6; /* Softer border */
+  padding: 15px;
 }
 
-.modal-content input {
-  width: calc(100% - 20px);
-  margin-bottom: 15px;
+th {
+  background-color: #007bff; /* Blue header */
+  color: white;
+  text-align: left;
 }
 
-.modal-content button {
-  margin: 10px 5px;
+td {
+  background-color: #f9f9f9;
 }
 
-/* Responsive Design */
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tr:hover {
+  background-color: #e9ecef; /* Soft highlight on row hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .App {
-    padding: 15px;
-  }
-
-  h1, h2 {
-    font-size: 1.8rem;
-  }
-
-  .book-table th, .book-table td {
-    padding: 10px;
-  }
-
-  .book-form {
+  .navbar {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
-  input, select, button {
-    width: 100%;
-    margin: 8px 0;
-    font-size: 1rem;
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
   }
 
-  .modal-content {
+  .container {
     padding: 20px;
+  }
+
+  button {
+    width: 100%; /* Full width button on mobile */
+    padding: 14px;
   }
 }
